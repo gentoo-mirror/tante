@@ -1,0 +1,27 @@
+--- hdaps-gl-0.0.5/hdaps-gl.c	2005-08-30 20:07:22.000000000 +0200
++++ hdaps-gl-0.0.5-t60/hdaps-gl.c	2007-02-19 13:08:38.000000000 +0100
+@@ -99,7 +99,7 @@
+ 	glPushMatrix ();
+ 
+ 	glRotated (val_x / 2.0, 0.0f, 0.0f, -1.0f);
+-	glRotated (val_y / 2.0, 1.0f, 0.0f, 0.0f);
++	glRotated (-val_y / 2.0, 1.0f, 0.0f, 0.0f);
+ 
+ 	glBegin (GL_QUADS);	// start drawing the laptop.
+ 
+@@ -196,12 +196,12 @@
+ {
+ 	int ret, x, y, do_update = 0;
+ 
+-	ret = read_position (&x, &y);
++	ret = read_position (&y, &x);
+ 	if (ret)
+ 		exit(EXIT_FAILURE);
+ 
+-	x -= rest_x;
+-	y -= rest_y;
++	y -= rest_x;
++	x -= rest_y;
+ 
+ 	/* only update if we surpass our threshold, to minimize jitter ... */ 
+ 	if (abs (x - val_x) > UPDATE_THRESHOLD) {
