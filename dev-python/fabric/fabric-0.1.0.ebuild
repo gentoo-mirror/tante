@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/python"
+DEPEND="virtual/python
+		>=dev-python/paramiko-1.7"
 
 S=${WORKDIR}/fab-${PV}
