@@ -1,0 +1,11 @@
+--- Makefile_orig	2009-03-18 11:21:23.497775621 +0100
++++ Makefile	2009-03-18 11:21:38.870492999 +0100
+@@ -13,7 +13,7 @@
+ #  CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ 
+ DESTDIR  =
+-PREFIX   = /usr/local
++PREFIX   = ../../image/usr
+ BINDIR   = $(PREFIX)/bin
+ ICONDIR  = $(PREFIX)/share/icons/hicolor/scalable/apps
+ MENUDIR  = $(PREFIX)/share/applications
