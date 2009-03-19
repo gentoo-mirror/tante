@@ -22,14 +22,7 @@ DEPEND="dev-cpp/gtkmm
 		dev-util/intltool"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# rewrite the makefile to specify proper path
-	epatch "${FILESDIR}/adjust_prefix.patch"
-}
-
 src_install() {
 	cd "${S}"
-	make install
+	make DESTDIR=../../image/ PREFIX=/usr install
 }
