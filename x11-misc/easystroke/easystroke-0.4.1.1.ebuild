@@ -23,6 +23,5 @@ DEPEND="dev-cpp/gtkmm
 RDEPEND=""
 
 src_install() {
-	cd "${S}"
 	make DESTDIR=../../image/ PREFIX=/usr install
 }
