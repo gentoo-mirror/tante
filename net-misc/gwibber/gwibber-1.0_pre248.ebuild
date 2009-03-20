@@ -21,7 +21,8 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	>=dev-python/feedparser-4.1
 	>=dev-python/gconf-python-2.22.3
 	>=dev-python/pyxdg-0.15
-	>=gnome-base/librsvg-2.22.2"
+	>=gnome-base/librsvg-2.22.2
+	dev-python/distutils-extra"
 DEPEND="virtual/python"
 
 src_unpack() {
