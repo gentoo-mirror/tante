@@ -30,3 +30,9 @@ DEPEND="virtual/python"
 
 S=${WORKDIR}/${P}
 
+src_install(){
+	distutils_src_install
+	elog "This gwibber build is based on segphault's mako branch because"
+	elog "the way gwibber trunk works atm does not work with current webkit"
+	elog "builds. Themes for gwibber trunk will not work."
+}
