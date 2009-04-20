@@ -19,6 +19,7 @@ RDEPEND=">=dev-python/django-1.0"
 S=${WORKDIR}/${PN}
 
 src_install(){
+	distutils_src_install
 	elog "In order to use the south schema migrations for your Django project,"
 	elog "just add 'south' to your INSTALLED_APPS in the settings.py file."
 	elog "manage.py will now automagically offer the new functions."
