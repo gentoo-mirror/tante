@@ -30,7 +30,3 @@ DEPEND="virtual/python"
 
 S=${WORKDIR}/${P}
 
-src_install(){
-	elog "This gwibber build uses the Mako templating branch of segphault because"
-	elog "the way gwibber trunk works does not work with current webkit builds."
-}
