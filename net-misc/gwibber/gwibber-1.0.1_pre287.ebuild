@@ -25,7 +25,9 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	dev-python/python-distutils-extra
 	dev-python/imaging
 	dev-python/mako
+	!dev-python/distutils-extra
 	"
+
 DEPEND="virtual/python"
 
 S=${WORKDIR}/${P}
