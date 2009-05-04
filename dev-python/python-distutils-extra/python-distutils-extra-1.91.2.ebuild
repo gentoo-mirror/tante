@@ -6,7 +6,7 @@ inherit distutils
 
 DESCRIPTION="Ubuntu enhancements to Python's distutils"
 HOMEPAGE="https://launchpad.net/python-distutils-extra"
-SRC_URI="http://packages.monkeycode.org/distutils-extra-${PV}.tar.gz"
+SRC_URI="http://packages.monkeycode.org/python-distutils-extra-${PV}.tar.gz"
 
 LICENSE=""
 SLOT="0"
