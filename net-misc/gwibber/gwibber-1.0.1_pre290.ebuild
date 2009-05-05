@@ -6,7 +6,7 @@ inherit distutils
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://packages.monkeycode.org/${P}.tar.bz2"
+SRC_URI="http://packages.monkeycode.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
