@@ -16,6 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+# The different themes, maybe I'll add useflags later
 THEMES="brave human noble wine wise"
 
 src_unpack(){
