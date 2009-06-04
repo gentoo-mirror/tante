@@ -20,8 +20,12 @@ DEPEND="dev-cpp/gtkmm
 		dev-libs/boost
 		dev-libs/dbus-glib
 		dev-util/intltool"
-RDEPEND=""
+RDEPEND="${DEPEND}"
+
+src_compile() {
+	emake DESTDIR="${D}" PREFIX="/usr/" || die "emake failed!"
+}
 
 src_install() {
-	make DESTDIR=../../image/ PREFIX=/usr install
+	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed!"
 }
