@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="dev-cpp/gtkmm
         x11-libs/libXrandr
-		x11-misc/xinput
+		x11-apps/xinput
 		x11-libs/libXtst
 		dev-libs/boost
 		dev-libs/dbus-glib
