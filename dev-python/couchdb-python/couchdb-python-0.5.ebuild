@@ -11,11 +11,23 @@ SRC_URI="http://pypi.python.org/packages/source/C/CouchDB/CouchDB-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="doc"
 
 DEPEND="dev-python/httplib2
         dev-python/simplejson
-		dev-db/couchdb"
+        virtual/python
+        dev-db/couchdb
+        doc? ( dev-python/epydoc )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/CouchDB-${PV}
+
+src_install() {
+	distutils_src_install
+
+	if use doc; then
+		epydoc --config=doc/conf/epydoc.ini
+	fi
+	
+	dohtml -r doc/* || die
+}
