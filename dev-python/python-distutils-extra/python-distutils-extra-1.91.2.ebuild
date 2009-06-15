@@ -10,7 +10,7 @@ SRC_URI="http://packages.monkeycode.org/python-distutils-extra-${PV}.tar.gz"
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/python"
