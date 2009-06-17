@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND="dev-lang/python
+        dev-python/setuptools"
 RDEPEND="dev-lang/python"
 
 S=${WORKDIR}/Paver-${PV}
