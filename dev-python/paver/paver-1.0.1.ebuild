@@ -5,7 +5,7 @@
 inherit distutils
 
 DESCRIPTION="Paver is a Python-based build/distribution/deployment
-scripting tool along the lines of Make or Rake."
+scripting tool along the lines of Make or Rake"
 HOMEPAGE="http://www.blueskyonmars.com/projects/paver/"
 SRC_URI="http://pypi.python.org/packages/source/P/Paver/Paver-${PV}.tar.gz"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-lang/python
-        dev-python/setuptools"
+dev-python/setuptools"
 RDEPEND="dev-lang/python"
 
 S=${WORKDIR}/Paver-${PV}
