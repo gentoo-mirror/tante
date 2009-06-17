@@ -14,14 +14,13 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-lang/python"
+RDEPEND="dev-lang/python
+         dev-util/git"
 
 S=${WORKDIR}/GitPython-${PV}
 
 src_install (){
 	cd ${S}
-	#mkdir -p ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/
-	#python setup.py install --prefix=${D}usr
 	distutils_src_install
 }
