@@ -16,11 +16,10 @@ IUSE=""
 
 DEPEND="dev-lang/python"
 RDEPEND="dev-lang/python
-         dev-util/git"
+		dev-util/git"
 
 S=${WORKDIR}/GitPython-${PV}
 
 src_install (){
-	cd ${S}
 	distutils_src_install
 }
