@@ -32,6 +32,12 @@ DEPEND="virtual/python"
 
 S=${WORKDIR}/${P}
 
-src_install(){
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/gwibber_fix_prefix.patch"
+} 
+
+src_install() {
 	distutils_src_install
 }
