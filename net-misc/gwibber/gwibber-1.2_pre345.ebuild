@@ -40,4 +40,12 @@ src_unpack() {
 
 src_install() {
 	distutils_src_install
+	elog "If gwibber does not open outbound links in your browser, you have"
+	elog "to set the respective GCONF keys to point to your browser."
+	elog "To set Gwibber to open Links in firefox run the following two commands:"
+	elog 
+	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/http/command 'firefox %s'"
+	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/https/command 'firefox %s'"
+	elog
+	elog "Or use gconf-editor to edit the respective keys."
 }
