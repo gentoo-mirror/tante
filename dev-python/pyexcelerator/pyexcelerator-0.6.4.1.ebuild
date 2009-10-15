@@ -6,7 +6,7 @@ inherit distutils
 
 DESCRIPTION="Generating Microsoft Excel files from Python"
 HOMEPAGE="http://pyexcelerator.sourceforge.net/"
-SRC_URI="mirror://sourceforge/{$PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
