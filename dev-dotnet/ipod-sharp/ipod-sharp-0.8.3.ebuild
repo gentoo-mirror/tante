@@ -8,7 +8,7 @@ inherit eutils mono
 
 DESCRIPTION="ipod-sharp provides high-level feature support for Apple's iPod and binds libipoddevice."
 HOMEPAGE="http://banshee-project.org/Ipod-sharp"
-SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
+SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,12 +22,6 @@ RDEPEND=">=dev-lang/mono-2.0
 DEPEND="${RDEPEND}
 	doc? ( >=virtual/monodoc-1.1.8 )
 	dev-util/pkgconfig"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/fix_ipod_podcast_playlist.patch"
-}
 
 src_configure() {
 	econf $(use_enable doc docs)
