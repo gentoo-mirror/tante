@@ -18,7 +18,9 @@ dev-python/pyxdg
 dev-python/gnome-keyring-python
 dev-python/dbus-python
 dev-python/twisted
-dev-python/pygobject"
+dev-python/pygobject
+dev-python/pygtk
+"
 RDEPEND=""
 
 S=${WORKDIR}/${P}
