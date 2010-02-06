@@ -20,6 +20,7 @@ dev-python/dbus-python
 dev-python/twisted
 dev-python/pygobject
 dev-python/pygtk
+dev-python/couchdb-python
 "
 RDEPEND=""
 
