@@ -16,7 +16,9 @@ IUSE=""
 DEPEND="dev-db/couchdb
 dev-python/pyxdg
 dev-python/gnome-keyring-python
-dev-python/dbus-python"
+dev-python/dbus-python
+dev-python/twisted
+dev-python/pygobject"
 RDEPEND=""
 
 S=${WORKDIR}/${P}
