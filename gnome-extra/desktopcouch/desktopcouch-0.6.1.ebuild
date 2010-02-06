@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-db/couchdb"
+DEPEND="dev-db/couchdb
+dev-python/pyxdg
+dev-python/gnome-keyring-python
+dev-python/dbus-python"
 RDEPEND=""
 
 S=${WORKDIR}/${P}
