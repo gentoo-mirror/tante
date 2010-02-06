@@ -21,6 +21,7 @@ dev-python/twisted
 dev-python/pygobject
 dev-python/pygtk
 dev-python/couchdb-python
+dev-python/python-oauth
 "
 RDEPEND=""
 
