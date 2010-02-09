@@ -4,6 +4,8 @@
 
 inherit distutils
 
+EAPI="2"
+
 DESCRIPTION="A CouchDB on every desktop, and the code to help it happen."
 HOMEPAGE="https://launchpad.net/desktopcouch"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
