@@ -22,6 +22,7 @@ dev-python/pygobject
 dev-python/pygtk
 dev-python/couchdb-python
 dev-python/python-oauth
+net-dns/avahi[python]
 "
 RDEPEND=""
 
