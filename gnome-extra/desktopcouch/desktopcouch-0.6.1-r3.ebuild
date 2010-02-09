@@ -27,3 +27,13 @@ net-dns/avahi[python]
 RDEPEND=""
 
 S=${WORKDIR}/${P}
+
+src_install() {
+    distutils_src_install
+    dobin "${FILESDIR}/desktopcouch-restart"
+    elog "Your desktopcouch can be accessed at"
+    elog "/home/YOURUSERNAME/.local/share/desktop-couch/couchdb.html"
+    elog "If things seem to be broken, try running"
+    elog "desktopcouch-restart"
+    
+}
