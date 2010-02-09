@@ -7,7 +7,7 @@
 # http://www.freedesktop.org/wiki/Specifications/desktopcouch/Documentation/Troubleshooting
 
 # kill running desktopcouch
-killall beam
+killall beam.smp
 # kill old ini file
 rm ~/.config/desktop-couch/desktop-couchdb.ini
 # now try restaring via dbus
