@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
+EAPI=2
+
 inherit distutils
 
 DESCRIPTION="A CouchDB on every desktop, and the code to help it happen."
@@ -29,11 +31,11 @@ RDEPEND=""
 S=${WORKDIR}/${P}
 
 src_install() {
-    distutils_src_install
-    dobin "${FILESDIR}/desktopcouch-restart"
-    elog "Your desktopcouch can be accessed at"
-    elog "/home/YOURUSERNAME/.local/share/desktop-couch/couchdb.html"
-    elog "If things seem to be broken, try running"
-    elog "desktopcouch-restart"
-    
+	distutils_src_install
+	dobin "${FILESDIR}/desktopcouch-restart"
+	elog "Your desktopcouch can be accessed at"
+	elog "/home/YOURUSERNAME/.local/share/desktop-couch/couchdb.html"
+	elog "If things seem to be broken, try running"
+	elog "desktopcouch-restart"
+
 }
