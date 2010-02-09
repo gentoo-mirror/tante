@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
@@ -36,14 +36,14 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/gwibber_fix_prefix.patch"
-} 
+}
 
 src_install() {
 	distutils_src_install
 	elog "If gwibber does not open outbound links in your browser, you have"
 	elog "to set the respective GCONF keys to point to your browser."
 	elog "To set Gwibber to open Links in firefox run the following two commands:"
-	elog 
+	elog
 	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/http/command 'firefox %s'"
 	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/https/command 'firefox %s'"
 	elog
