@@ -27,6 +27,7 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	dev-python/mako
 	!dev-python/distutils-extra
 	gnome-extra/desktopcouch
+    dev-python/pycurl 
 	"
 
 DEPEND="virtual/python"
