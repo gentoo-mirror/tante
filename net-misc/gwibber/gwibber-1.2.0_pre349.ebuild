@@ -34,7 +34,7 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/gwibber_fix_prefix.patch"
 }
 

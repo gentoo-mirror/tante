@@ -29,8 +29,8 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	dev-python/mako
 	!dev-python/distutils-extra
 	gnome-extra/desktopcouch
-    dev-python/pycurl 
-	"
+	dev-python/pycurl
+"
 
 DEPEND="virtual/python"
 
@@ -41,7 +41,7 @@ src_install() {
 	elog "If gwibber does not open outbound links in your browser, you have"
 	elog "to set the respective GCONF keys to point to your browser."
 	elog "To set Gwibber to open Links in firefox run the following two commands:"
-	elog 
+	elog " " 
 	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/http/command 'firefox %s'"
 	elog "gconftool-2 -s -t string /desktop/gnome/url-handlers/https/command 'firefox %s'"
 	elog
