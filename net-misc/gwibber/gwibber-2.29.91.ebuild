@@ -6,7 +6,9 @@ inherit distutils
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://launchpad.net/gwibber/trunk/2.29.90/+download/${P}.tar.gz"
+#SRC_URI="http://launchpad.net/gwibber/trunk/${PV}/+download/${P}.tar.gz"
+# right now there's no "official" bin file, I mirrored it
+SRC_URI="http://packages.monkeycode.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
