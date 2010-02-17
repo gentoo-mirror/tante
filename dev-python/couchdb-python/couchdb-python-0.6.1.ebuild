@@ -14,10 +14,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 DEPEND="dev-python/httplib2
-        dev-python/simplejson
-        virtual/python
-        dev-db/couchdb
-        doc? ( dev-python/epydoc )"
+		dev-python/simplejson
+		virtual/python
+		dev-db/couchdb
+		doc? ( dev-python/epydoc )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/CouchDB-${PV}
@@ -28,6 +28,5 @@ src_install() {
 	if use doc; then
 		epydoc --config=doc/conf/epydoc.ini
 	fi
-	
 	dohtml -r doc/* || die
 }
