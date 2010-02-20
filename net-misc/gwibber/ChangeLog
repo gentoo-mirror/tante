@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  20 Feb 2010; Jürgen Geuter <tante@the-gay-bar.com>
+  gwibber-2.29.91.ebuild:
+  Added dev-python/libwnck-python dependency
+
   17 Feb 2010; Jürgen Geuter <tante@the-gay-bar.com> Manifest:
   Dropped old ebuilds with security issues.
 

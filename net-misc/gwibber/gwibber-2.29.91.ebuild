@@ -1,4 +1,4 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -30,6 +30,7 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	!dev-python/distutils-extra
 	gnome-extra/desktopcouch
 	dev-python/pycurl
+	dev-python/libwnck-python
 "
 
 DEPEND="virtual/python"
