@@ -1,9 +1,0 @@
---- setup.cfg_orig	2009-03-04 13:12:43.219266215 +0100
-+++ setup.cfg	2009-03-04 13:12:50.184266552 +0100
-@@ -1,5 +1,5 @@
- [install]
--prefix=/usr/local
-+prefix=/usr
- 
- [build]
- i18n = True
