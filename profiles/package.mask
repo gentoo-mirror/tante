@@ -1,2 +1,2 @@
-# Considered experimental by upstream
-media-libs/clutter-cairo
+# Node.js live ebuild. Use at your own risk.
+=dev-lang/nodejs-9999
