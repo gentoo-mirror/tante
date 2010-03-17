@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="dev-lang/python"
 RDEPEND="dev-lang/python
-		dev-util/git"
+		dev-vcs/git"
 
 S=${WORKDIR}/GitPython-${PV}
 
