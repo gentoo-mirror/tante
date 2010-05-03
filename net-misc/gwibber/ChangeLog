@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/gwibber
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gwibber-2.31.1 (28 Apr 2010)
+
+  28 Apr 2010; Jürgen Geuter <tante@the-gay-bar.com>
+  +gwibber-2.31.1.ebuild, +metadata.xml:
+  Re-added gwibber to the overlay, this time the sqlite-backend branch
+
