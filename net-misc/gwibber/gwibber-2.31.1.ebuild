@@ -14,7 +14,7 @@ SRC_URI="http://packages.monkeycode.org/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 -x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/dbus-python-0.80.2
@@ -31,7 +31,12 @@ RDEPEND=">=dev-python/dbus-python-0.80.2
 	>=dev-python/pyxdg-0.15
 	>=dev-python/mako-0.2.4
 	>=dev-python/pygtk-2.16
-	>=gnome-base/librsvg-2.22.2"
+	>=gnome-base/librsvg-2.22.2
+	<dev-db/couchdb-0.11.0
+	"
+	# the couchdb dependency is an ugly hack to make sure a working
+	# desktopcouch is running which does not work with couchdb-0.11.0
+	# in the default conf
 
 src_install() {
 	distutils_src_install
@@ -39,4 +44,6 @@ src_install() {
 	insinto /usr/share/dbus-1/services
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
+	elog "This Gwibber branch uses SQLite for message storage."
+	elog "Only the Account login data is stored in desktopcouch."
 }
