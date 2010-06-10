@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  10 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  gwibber-2.31.1.ebuild:
+  Depend on Python with SQLite bindings enabled.
+
 *gwibber-2.31.1 (28 Apr 2010)
 
   28 Apr 2010; Jürgen Geuter <tante@the-gay-bar.com>

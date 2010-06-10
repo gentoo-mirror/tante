@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-python/dbus-python-0.80.2
+RDEPEND="
+	dev-lang/python[sqlite]
+	>=dev-python/dbus-python-0.80.2
 	>=dev-python/gconf-python-2.18.0
 	>=dev-python/imaging-1.1.6
 	>=dev-python/notify-python-0.1.1
