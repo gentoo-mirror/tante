@@ -9,8 +9,11 @@ inherit distutils
 DESCRIPTION="A Python Library for the Twitter (and Identi.ca) API. Includes
 Oauth and Xauth authentification"
 HOMEPAGE="http://github.com/joshthecoder/tweepy"
-SRC_URI="http://github.com/joshthecoder/tweepy/tarball/${PV}"
-
+# The original URL would be
+#SRC_URI="http://github.com/joshthecoder/tweepy/tarball/${PV}"
+# but github's downloads give bad names which confuses src_unpack
+# so I mirrored the archive under
+SRC_URI="http://packages.monkeycode.org/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
