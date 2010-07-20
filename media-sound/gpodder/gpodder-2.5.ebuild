@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS="~x86 ~amd64 ~amd64-linux ~x86-linux"
 	EGIT_REPO_URI="git://repo.or.cz/gpodder.git"
 else
-	KEYWORDS="x86 amd64 amd64-linux x86-linux"
+	KEYWORDS="~x86 ~amd64 ~amd64-linux ~x86-linux"
 	SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 fi
 
