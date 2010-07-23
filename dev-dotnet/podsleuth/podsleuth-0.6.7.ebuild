@@ -17,8 +17,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0
 	dev-dotnet/dbus-glib-sharp
-	>=sys-apps/hal-0.5.6
-	<=sys-apps/sg3_utils-1.25"
+	sys-apps/sg3_utils"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
