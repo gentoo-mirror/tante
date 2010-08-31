@@ -43,10 +43,11 @@ src_install() {
 	insinto /usr/share/dbus-1/services
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
-	elog "This Gwibber branch uses SQLite for message storage."
-	elog "Only the Account login data is stored in desktopcouch."
 	elog "This branch is a clone from Ken Vandine's Oauth branch"
 	elog "from lp:~ken-vandine/gwibber/twitter-oauth-3"
 	elog "As soon as it has been merged back to mainline I'll update."
-	elog "Oauth support might be flaky :( but without it, Twitter is dead."
+	elog "OAuth support might be flaky :( but without it, Twitter is dead."
+	elog "You might have to re-add your twitter accounts in order for it to
+	work"
+
 }
