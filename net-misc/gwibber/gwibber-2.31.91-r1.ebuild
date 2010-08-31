@@ -34,6 +34,7 @@ RDEPEND="
 	>=dev-python/pyxdg-0.15
 	>=dev-python/mako-0.2.4
 	>=dev-python/pygtk-2.16
+	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
 	<dev-db/couchdb-0.11.0
 	"

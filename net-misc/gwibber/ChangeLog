@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  31 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
+  gwibber-2.31.91-r1.ebuild:
+  Depend on dev-python/oauth or it won't start now.
+
   10 Jun 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gwibber-2.31.1.ebuild:
   One further missing dependency.
