@@ -36,12 +36,7 @@ RDEPEND="
 	>=dev-python/pygtk-2.16
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
-	<dev-db/couchdb-0.11.0
 	"
-	# the couchdb dependency is an ugly hack to make sure a working
-	# desktopcouch is running which does not work with couchdb-0.11.0
-	# in the default conf
-
 src_install() {
 	distutils_src_install
 
