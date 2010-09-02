@@ -1,0 +1,16 @@
+# ChangeLog for dev-dotnet/gkeyfile-sharp
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*gkeyfile-sharp-0.1 (02 Sep 2010)
+
+  02 Sep 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  +gkeyfile-sharp-0.1.ebuild:
+  initial import
+
+*gudev-sharp-0.1 (02 Sep 2010)
+
+  02 Sep 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  +gudev-sharp-0.1.ebuild:
+  Initial Import
+
