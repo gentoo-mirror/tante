@@ -29,11 +29,11 @@ src_prepare () {
 }
 
 src_configure () {
-	econf
+	./configure --prefix=/usr
 }
 
 src_compile() {
-	emake
+	make 
 }
 
 src_install() {
