@@ -67,9 +67,10 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		>=media-plugins/gst-plugins-taglib-${GVER}
 	)
 	ipod? (
-		>=dev-dotnet/ipod-sharp-0.8.5
+		>=media-libs/libgpod-0.7.94[mono]
 		dev-dotnet/gio-sharp
 		dev-dotnet/gudev-sharp
+
 	)
 	mtp? (
 		media-libs/libmtp
