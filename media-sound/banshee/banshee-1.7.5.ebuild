@@ -96,9 +96,9 @@ src_prepare () {
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
 
-	epatch "${FILESDIR}/${P}-fix-gdu-build.patch"
-	epatch "${FILESDIR}/${P}-make-webkit-optional.patch"
-	epatch "${FILESDIR}/${P}-fix-collisions.patch"
+	#epatch "${FILESDIR}/${P}-fix-gdu-build.patch"
+	#epatch "${FILESDIR}/${P}-make-webkit-optional.patch"
+	#epatch "${FILESDIR}/${P}-fix-collisions.patch"
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
 }
