@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+gtk python +udev iphone"
+IUSE="+gtk python +udev iphone mono"
 
 RDEPEND=">=dev-libs/glib-2.16
 	sys-apps/sg3_utils
@@ -23,7 +23,9 @@ RDEPEND=">=dev-libs/glib-2.16
 	python? ( >=dev-lang/python-2.3
 		>=media-libs/mutagen-1.8
 		>=dev-python/pygobject-2.8 )
-	udev? ( sys-fs/udev )"
+	udev? ( sys-fs/udev )
+	mono? ( dev-lang/mono )
+	"
 DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-1.3.24 )
 	dev-util/pkgconfig
@@ -36,7 +38,9 @@ src_configure() {
 		$(use_enable gtk gdk-pixbuf) \
 		$(use_enable python pygobject) \
 		$(use_with python) \
-		$(use_with iphone libimobiledevice)
+		$(use_with iphone libimobiledevice) \
+		$(use_enable mono) \
+		$(use_with mono) 
 }
 
 src_install() {
