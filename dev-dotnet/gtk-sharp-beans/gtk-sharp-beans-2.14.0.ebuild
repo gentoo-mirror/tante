@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-dotnet/gio-sharp"
 RDEPEND="${DEPEND}"
 
 src_prepare () {
