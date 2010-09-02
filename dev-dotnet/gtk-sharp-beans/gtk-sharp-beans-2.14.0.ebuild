@@ -24,6 +24,7 @@ src_prepare () {
 }
 
 src_configure () {
+	cd ${WORKDIR}/${PN}-${PV}/
 	configure --prefix=/usr
 }
 
