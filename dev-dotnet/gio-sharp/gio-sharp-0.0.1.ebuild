@@ -16,11 +16,16 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-lang/mono-2
+	dev-dotnet/glib-sharp
+	dev-dotnet/gtk-sharp-gapi
+	>=dev-libs/glib-2.22:2"
+DEPEND="${RDEPEND}"
 
 src_prepare () {
-	eautoreconf 
+	cd ${WORKDIR}/${PN}-${PV}/
+	./autogen-2.22.sh
+	#eautoreconf 
 }
 
 src_configure () {
