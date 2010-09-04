@@ -122,7 +122,7 @@ src_configure() {
 		$(use_enable boo) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
-		$(use_enable ipod) \
+		$(use_enable ipod) $(use_enable ipod appledevice) \
 		$(use_enable podcast) \
 		$(use_enable karma) \
 		$(use_enable web webkit) \
