@@ -34,19 +34,15 @@ RDEPEND="
 	>=dev-python/pyxdg-0.15
 	>=dev-python/mako-0.2.4
 	>=dev-python/pygtk-2.16
+	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
-	<dev-db/couchdb-0.11.0
 	"
-	# the couchdb dependency is an ugly hack to make sure a working
-	# desktopcouch is running which does not work with couchdb-0.11.0
-	# in the default conf
-
 src_install() {
 	distutils_src_install
 
 	insinto /usr/share/dbus-1/services
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
-	elog "This Gwibber branch uses SQLite for message storage."
-	elog "Only the Account login data is stored in desktopcouch."
+	elog "If your twitter account does not work try re-adding it."
+	elog "Facebook support is somehwat flaky."
 }
