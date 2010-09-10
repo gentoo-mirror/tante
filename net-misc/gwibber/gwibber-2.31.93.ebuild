@@ -44,5 +44,7 @@ src_install() {
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
 	elog "If your twitter account does not work try re-adding it."
-	elog "Facebook support is somehwat flaky."
+	elog "Facebook support is very flaky and will probably fail a lot."
+	elog "It's a structural problem with Facebook's OAuth implementation"
+	elog "and rate-limiting, nothing you can really fix."
 }
