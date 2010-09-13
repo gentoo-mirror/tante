@@ -70,7 +70,6 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		>=media-libs/libgpod-0.7.94[mono]
 		dev-dotnet/gio-sharp
 		dev-dotnet/gudev-sharp
-
 	)
 	mtp? (
 		media-libs/libmtp
@@ -97,22 +96,18 @@ src_prepare () {
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
 
-	#epatch "${FILESDIR}/${P}-fix-gdu-build.patch"
-	#epatch "${FILESDIR}/${P}-make-webkit-optional.patch"
-	#epatch "${FILESDIR}/${P}-fix-collisions.patch"
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
 }
 
 src_configure() {
-	# Disable gio till gtk-sharp-beans and gio-sharp are in-tree
-	# Ditto gst-sharp
+	# Disable gst-sharp till in tree
 	local myconf="--disable-dependency-tracking --disable-static
 		--enable-gnome --enable-schemas-install
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
-		--disable-gio --disable-gst-sharp
+		--disable-gst-sharp
 		--disable-torrent
 		--disable-shave"
 

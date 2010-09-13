@@ -2,6 +2,11 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Sep 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  banshee-1.7.5.ebuild:
+  Dropped some configure crap from the ebuild. Thanks to kolmax94@gmail.com
+  for pointing it out.
+
   04 Sep 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   banshee-1.7.5.ebuild:
   Die if emake fails.
