@@ -10,7 +10,7 @@ inherit eutils distutils
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://packages.monkeycode.org/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,6 +36,7 @@ RDEPEND="
 	>=dev-python/pygtk-2.16
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
+    net-misc/curl[gnutls]
 	"
 src_install() {
 	distutils_src_install
