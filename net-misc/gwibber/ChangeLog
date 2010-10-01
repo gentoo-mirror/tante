@@ -2,6 +2,12 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*gwibber-2.32.0 (01 Oct 2010)
+
+  01 Oct 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  +gwibber-2.32.0.ebuild:
+  Bumped gwibber to current release
+
 *gwibber-2.31.92 (10 Sep 2010)
 
   10 Sep 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
