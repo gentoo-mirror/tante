@@ -22,7 +22,7 @@ HOMEPAGE="http://www.gpodder.org"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="bluetooth dbus examples gtkhtml ipod libnotify mad mtp nls ogg rockbox"
+IUSE="bluetooth dbus examples gtkhtml ipod libnotify mad mtp nls ogg rockbox webkit"
 
 RDEPEND="dev-python/feedparser
   dev-lang/python[sqlite]
