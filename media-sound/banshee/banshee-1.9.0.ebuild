@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.7.4.ebuild,v 1.1 2010/08/31 11:44:15 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.0.ebuild,v 1.2 2010/10/23 14:36:16 pacho Exp $
 
 EAPI=2
 
@@ -12,12 +12,14 @@ DESCRIPTION="Import, organize, play, and share your music using a simple and pow
 HOMEPAGE="http://banshee-project.org"
 
 #BANSHEE_V2=$(get_version_component_range 2)
+#[[ $((${BANSHEE_V2} % 2)) -eq 0 ]] && RELTYPE=stable || RELTYPE=unstable
+#SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV}.tar.bz2"
 SRC_URI="http://download.banshee-project.org/${PN}/unstable/${PV}/${PN}-1-${PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test web youtube"
+IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test +web youtube"
 
 # Hal is required until upstream bug 612616 is solved
 RDEPEND=">=dev-lang/mono-2.4.3
@@ -48,8 +50,6 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	>=dev-dotnet/mono-addins-0.4[gtk]
 	>=dev-dotnet/taglib-sharp-2.0.3.7
 	>=dev-db/sqlite-3.4
-	dev-dotnet/gtk-sharp-beans
-	dev-dotnet/gkeyfile-sharp
 	karma? ( >=media-libs/libkarma-0.1.0-r1 )
 	aac? ( >=media-plugins/gst-plugins-faad-${GVER} )
 	boo? (
@@ -67,12 +67,10 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		>=media-plugins/gst-plugins-taglib-${GVER}
 	)
 	ipod? (
-		>=media-libs/libgpod-0.7.94[mono]
-		dev-dotnet/gio-sharp
-		dev-dotnet/gudev-sharp
+		>=media-libs/libgpod-0.7.95[mono]
 	)
 	mtp? (
-		media-libs/libmtp
+		>=media-libs/libmtp-0.3.0
 	)
 	web? (
 		>=net-libs/webkit-gtk-1.2.2
@@ -96,18 +94,23 @@ src_prepare () {
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
 
+	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch"
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
 }
 
 src_configure() {
-	# Disable gst-sharp till in tree
+	# Disable gio till gtk-sharp-beans and gio-sharp are in-tree
+	# Disable gio-hardware till gudev-sharp and gkeyfile-sharp are around
+	# for a bit longer (when these are in, we can drop HAL)
+	# Ditto gst-sharp
 	local myconf="--disable-dependency-tracking --disable-static
 		--enable-gnome --enable-schemas-install
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
-		--disable-gst-sharp
+		--disable-gio --disable-gst-sharp
+		--disable-gio_hardware --enable-hal
 		--disable-torrent
 		--disable-shave"
 
@@ -117,7 +120,7 @@ src_configure() {
 		$(use_enable boo) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
-		$(use_enable ipod) $(use_enable ipod appledevice) \
+		$(use_enable ipod appledevice) --disable-ipod \
 		$(use_enable podcast) \
 		$(use_enable karma) \
 		$(use_enable web webkit) \
@@ -126,7 +129,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake MCS=/usr/bin/gmcs || die "emake failed"
+	emake MCS=/usr/bin/gmcs
 }
 
 src_install() {
