@@ -94,7 +94,6 @@ src_prepare () {
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
 
-	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch"
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
 }
@@ -109,8 +108,7 @@ src_configure() {
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
-		--disable-gio --disable-gst-sharp
-		--disable-gio_hardware --enable-hal
+		--disable-gst-sharp
 		--disable-torrent
 		--disable-shave"
 
