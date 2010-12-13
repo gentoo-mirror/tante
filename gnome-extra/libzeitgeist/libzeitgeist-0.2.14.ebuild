@@ -18,6 +18,10 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+src_configure(){
+	econf --enable-module=no
+}
+
 src_compile() {
 	emake DESTDIR="${D}" PREFIX="/usr/" || die "emake failed!"
 }
