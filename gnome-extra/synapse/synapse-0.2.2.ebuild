@@ -19,7 +19,8 @@ DEPEND=">=dev-lang/vala-0.10
        x11-libs/gtkhotkey
 	   dev-libs/json-glib
 	   gnome-extra/zeitgeist
-	   gnome-extra/libzeitgeist"
+	   gnome-extra/libzeitgeist
+	   gnome-extra/indicator-application"
 RDEPEND="${DEPEND}"
 
 src_compile() {
