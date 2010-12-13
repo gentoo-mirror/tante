@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-libs/libindicator
+		gnome-extra/libdbusmenu"
 RDEPEND="${DEPEND}"
 
 src_compile() {
