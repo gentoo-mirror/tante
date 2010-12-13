@@ -18,7 +18,8 @@ IUSE=""
 DEPEND=">=dev-lang/vala-0.11.0
        x11-libs/gtkhotkey
 	   dev-libs/json-glib
-	   gnome-extra/zeitgeist"
+	   gnome-extra/zeitgeist
+	   gnome-extra/libzeitgeist"
 RDEPEND="${DEPEND}"
 
 src_compile() {
