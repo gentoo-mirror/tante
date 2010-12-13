@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/zeitgeist
+# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*zeitgeist-0.6 (13 Dec 2010)
+
+  13 Dec 2010; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  +zeitgeist-0.6.ebuild:
+  Initial import of Zeitgeist
+
