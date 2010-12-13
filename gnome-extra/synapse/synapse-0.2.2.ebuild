@@ -20,7 +20,9 @@ DEPEND=">=dev-lang/vala-0.10
 	   dev-libs/json-glib
 	   gnome-extra/zeitgeist
 	   gnome-extra/libzeitgeist
-	   gnome-extra/indicator-application"
+	   gnome-extra/indicator-application
+	   dev-libs/libindicator
+	   gnome-extra/libdbusmenu"
 RDEPEND="${DEPEND}"
 
 src_compile() {
