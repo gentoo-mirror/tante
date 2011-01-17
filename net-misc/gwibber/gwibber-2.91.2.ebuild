@@ -43,8 +43,5 @@ src_install() {
 	insinto /usr/share/dbus-1/services
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
-	elog "If your twitter account does not work try re-adding it."
-	elog "Facebook support is very flaky and will probably fail a lot."
-	elog "It's a structural problem with Facebook's OAuth implementation"
-	elog "and rate-limiting, nothing you can really fix."
+	elog "If one of your accounts does not work try re-adding it."
 }
