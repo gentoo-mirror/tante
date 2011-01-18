@@ -26,7 +26,6 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
 	x11-themes/gnome-icon-theme
 	sys-apps/dbus
-	sys-apps/hal
 	>=dev-dotnet/gtk-sharp-2.12
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1

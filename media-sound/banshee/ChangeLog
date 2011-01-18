@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  18 Jan 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  banshee-1.9.2.ebuild:
+  dropped hal dependency
+
 *banshee-1.9.2 (17 Jan 2011)
 
   17 Jan 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
