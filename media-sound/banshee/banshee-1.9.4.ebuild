@@ -67,6 +67,7 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	)
 	ipod? (
 		>=media-libs/libgpod-0.7.95[mono]
+		dev-dotnet/gio-sharp
 	)
 	mtp? (
 		>=media-libs/libmtp-0.3.0
