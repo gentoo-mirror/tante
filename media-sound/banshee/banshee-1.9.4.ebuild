@@ -98,10 +98,6 @@ src_prepare () {
 }
 
 src_configure() {
-	# Disable gio till gtk-sharp-beans and gio-sharp are in-tree
-	# Disable gio-hardware till gudev-sharp and gkeyfile-sharp are around
-	# for a bit longer (when these are in, we can drop HAL)
-	# Ditto gst-sharp
 	local myconf="--disable-dependency-tracking --disable-static
 		--enable-gnome --enable-schemas-install
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
@@ -109,7 +105,8 @@ src_configure() {
 		--enable-gapless-playback
 		--disable-gst-sharp
 		--disable-torrent
-		--disable-shave"
+		--disable-shave
+		--disable-hal"
 
 	econf \
 		$(use_enable doc docs) \
