@@ -37,6 +37,13 @@ RDEPEND="
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
 	"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "$FILESDIR"/gwibber-disable-networkmanager.patch
+}
+
 src_install() {
 	distutils_src_install
 
@@ -44,4 +51,6 @@ src_install() {
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
 	elog "If one of your accounts does not work try re-adding it."
+	elog "I disabled NetworkManager detection for now because with newer"
+	elog "NM versions the interface changed. NM will be back soon."
 }

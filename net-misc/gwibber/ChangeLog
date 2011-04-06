@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Apr 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  gwibber-3.0.0.ebuild, +files/gwibber-disable-networkmanager.patch:
+  Disabled NetWorkmanager for gwibber-3.0
+
 *gwibber-3.0.0 (06 Apr 2011)
 
   06 Apr 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
