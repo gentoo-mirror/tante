@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-2.29.92.1.ebuild,v 1.1 2010/03/15 02:40:52 neurogeek Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit eutils distutils
