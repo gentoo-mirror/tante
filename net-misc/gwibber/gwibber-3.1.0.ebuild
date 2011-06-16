@@ -10,8 +10,7 @@ inherit eutils distutils
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://launchpad.net/${PN}/2.32/2.32.0/+download/${P}.tar.gz"
-
+SRC_URI="http://launchpad.net/${PN}/3.2/3.1.0/+download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -37,14 +36,20 @@ RDEPEND="
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
 	"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "$FILESDIR"/gwibber-disable-networkmanager.patch
+}
+
 src_install() {
 	distutils_src_install
 
 	insinto /usr/share/dbus-1/services
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
-	elog "If your twitter account does not work try re-adding it."
-	elog "Facebook support is very flaky and will probably fail a lot."
-	elog "It's a structural problem with Facebook's OAuth implementation"
-	elog "and rate-limiting, nothing you can really fix."
+	elog "If one of your accounts does not work try re-adding it."
+	elog "I disabled NetworkManager detection for now because with newer"
+	elog "NM versions the interface changed. NM will be back soon."
 }
