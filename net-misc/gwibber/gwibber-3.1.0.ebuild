@@ -40,7 +40,7 @@ RDEPEND="
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	#epatch "$FILESDIR"/gwibber-twitter-api-key.patch
+	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
 }
 
 
@@ -51,7 +51,7 @@ src_install() {
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
 	elog "If one of your accounts does not work try re-adding it."
-	elog "I changed the Twitter API Key so we have access to our Direct
-	Messages"
+	elog "I changed the Twitter API Key so we have access to our Direct"
+	elog "Messages"
 	elog "You will have to reauthentificate/readd your twitter account"
 }
