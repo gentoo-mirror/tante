@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  03 Jul 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  gwibber-3.1.0.ebuild, +files/gwibber-twitter-api-key.patch:
+  Updated API Key
+
 *gwibber-3.1.0 (16 Jun 2011)
 
   16 Jun 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
