@@ -40,7 +40,7 @@ RDEPEND="
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
+	#epatch "$FILESDIR"/gwibber-twitter-api-key.patch
 }
 
 
