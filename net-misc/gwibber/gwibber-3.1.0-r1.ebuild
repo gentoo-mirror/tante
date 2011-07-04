@@ -10,8 +10,7 @@ inherit eutils distutils
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
 HOMEPAGE="https://launchpad.net/gwibber"
-SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
-
+SRC_URI="http://launchpad.net/${PN}/3.2/3.1.0/+download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -37,6 +36,15 @@ RDEPEND="
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
 	"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
+	epatch "$FILESDIR"/make_nm_optional.patch
+}
+
+
 src_install() {
 	distutils_src_install
 
@@ -44,4 +52,7 @@ src_install() {
 	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
 	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
 	elog "If one of your accounts does not work try re-adding it."
+	elog "I changed the Twitter API Key so we have access to our Direct"
+	elog "Messages"
+	elog "You will have to reauthentificate/readd your twitter account"
 }
