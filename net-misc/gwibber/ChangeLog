@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jul 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
+  gwibber-3.1.0-r2.ebuild, +files/gwibber-fix-uuid-import.patch:
+  Added patch to workaround Bug #351897 for Gwibber
+
   03 Jul 2011; Jürgen Geuter (tante) <tante@the-gay-bar.com>
   gwibber-3.1.0.ebuild, +files/gwibber-twitter-api-key.patch:
   Updated API Key
