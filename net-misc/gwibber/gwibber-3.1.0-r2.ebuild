@@ -37,6 +37,8 @@ RDEPEND="
 	>=gnome-base/librsvg-2.22.2
 	"
 
+DOC="AUTHORS README"
+
 src_prepare() {
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
 	epatch "$FILESDIR"/make_nm_optional.patch
@@ -45,10 +47,7 @@ src_prepare() {
 
 src_install() {
 	distutils_src_install
-
-	insinto /usr/share/dbus-1/services
-	doins com.Gwibber{.Service,Client}.service || die "Installing services failed."
-	doman gwibber{,-poster}.1 || die "Man page couldn't be installed."
+	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
 	elog "New Twitter API key means that you have to re-add"
 	elog "your Twitter accounts."
 	elog "If problems emerge, try re-adding the broken accounts."
