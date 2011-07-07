@@ -48,7 +48,6 @@ src_prepare() {
 src_install() {
 	distutils_src_install
 	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
-	elog "New Twitter API key means that you have to re-add"
-	elog "your Twitter accounts."
-	elog "If problems emerge, try re-adding the broken accounts."
+	elog "A new Twitter API is used. If your old accounts fail to work, try to"
+	elog "re-add them."
 }
