@@ -18,3 +18,8 @@ DEPEND="dev-util/gtk-doc
         dev-libs/gobject-introspection"
 
 RDEPEND="${DEPEND}"
+
+src_install (){
+	dodoc README LICENSE
+	emake DESTDIR="${D}" install
+}
