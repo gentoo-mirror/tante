@@ -2,7 +2,10 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.16.ebuild,v 1.8 2011/03/16 10:09:30 nirbheek Exp $
 
+
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="Spell checking widget for GTK2"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
