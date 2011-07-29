@@ -3,7 +3,6 @@
 # $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.3 2011/07/07 18:14:12 hwoarang Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 
 inherit eutils distutils
@@ -35,14 +34,10 @@ RDEPEND="
 	>=dev-python/pygtk-2.16
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
+	dev-libs/dee
 	"
 
 DOC="AUTHORS README"
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
@@ -50,8 +45,8 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install
 	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
+	emake DISTDIR="${D}" install
 	elog "A new Twitter API is used. If your old accounts fail to work, try to"
 	elog "re-add them."
 }
