@@ -46,7 +46,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
-	epatch "$FILESDIR"/make_nm_optional.patch
 	epatch "$FILESDIR"/gwibber-fix-uuid-import.patch
 }
 
