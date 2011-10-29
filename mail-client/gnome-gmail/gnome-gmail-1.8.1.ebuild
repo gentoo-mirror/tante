@@ -16,3 +16,10 @@ IUSE=""
 DEPEND="gnome-base/gconf"
 RDEPEND="${DEPEND}"
 
+src_compile() {
+	emake DESTDIR="${D}" PREFIX="/usr/" || die "emake failed!"
+}
+
+src_install () {
+	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed!"
+}
