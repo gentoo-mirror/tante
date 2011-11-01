@@ -35,6 +35,7 @@ RDEPEND="
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
 	>=dev-libs/dee-0.5.22
+	net-misc/curl[gnutls]
 	"
 
 DOC="AUTHORS README"
