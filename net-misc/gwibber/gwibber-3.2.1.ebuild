@@ -5,7 +5,7 @@
 EAPI="3"
 PYTHON_USE_WITH="sqlite"
 
-inherit eutils distutils
+inherit eutils
 
 DESCRIPTION="Gwibber is an open source microblogging client for GNOME developed
 with Python and GTK."
@@ -42,8 +42,13 @@ DOC="AUTHORS README"
 src_prepare() {
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
 	epatch "$FILESDIR"/gwibber-fix-uuid-import.patch
+	epatch "$FILESDIR"/gtkspell-pc-path.patch
 }
 
+src_configure() {
+	# we have no unity to build against
+	econf  --disable-unity
+}
 src_install() {
 	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
 	emake DISTDIR="${D}" install
