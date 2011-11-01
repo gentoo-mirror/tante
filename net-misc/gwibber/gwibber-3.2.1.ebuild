@@ -50,7 +50,6 @@ src_configure() {
 	econf  --disable-unity
 }
 src_install() {
-	doman gwibber{,-poster,-accounts}.1 || die "Man page couldn't be installed."
 	emake DISTDIR="${D}" install
 	elog "A new Twitter API is used. If your old accounts fail to work, try to"
 	elog "re-add them."
