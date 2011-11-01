@@ -34,7 +34,7 @@ RDEPEND="
 	>=dev-python/pygtk-2.16
 	dev-python/oauth
 	>=gnome-base/librsvg-2.22.2
-	dev-libs/dee
+	>=dev-libs/dee-0.5.22
 	"
 
 DOC="AUTHORS README"
