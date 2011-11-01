@@ -49,8 +49,9 @@ src_configure() {
 	# we have no unity to build against
 	econf  --disable-unity
 }
+
 src_install() {
-	emake DISTDIR="${D}" install
+	emake DESTDIR="${D}" prefix="/usr" install
 	elog "A new Twitter API is used. If your old accounts fail to work, try to"
 	elog "re-add them."
 }
