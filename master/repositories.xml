@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name><![CDATA[tante-overlay]]></name>
+    <description lang="en"><![CDATA[tante Overlay]]></description>
+    <homepage>http://github.com/stefan-langenmaier/brother-overlay</homepage>
+    <owner type="person">
+      <email>tante@tante.cc</email>
+      <name><![CDATA[tante]]></name>
+    </owner>
+    <source type="git">https://github.com/tante/overlay.git</source>
+    <feed>http://github.com/tante/overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
