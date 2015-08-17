@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
+EAPI="3"
 
 DESCRIPTION="odt2txt is a command-line tool which extracts the text out of
 OpenDocument Texts produced by OpenOffice.org, StarOffice, KOffice and
